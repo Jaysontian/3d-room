@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Room Demo</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script src="/scroll-entrance.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script src="/actions.js"></script>
+  </head>
+  <body>
+    <div class="info" data-entrance="from-right">
+      <h1>Jayson Tian</h1>
+      <p>
+        I am a UCLA student, software developer, artist, coffee barista, and
+        neuroscience geek.
+      </p>
+      <p>
+        I'm currently a first year student studying cognitive science and
+        computer science at UCLA. I am specifically interested in exploring the
+        intersection between machines, software, and human behaviour. I’m
+        passionate about education, arts & culture, and entrepreneurship.
+        <br /><br />In my downtime, I like to research, build, and create very
+        questionable things that vary in subject matter – I write a blog,
+        publish a webcomic, design neuroscience experiments, compose music, and
+        I particularly enjoy developing apps (and websites like this).
+      </p>
+      <button onclick="wtf()" id="comic">Zoom</button>
+    </div>
+  </body>
+  <script
+    async
+    src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+  ></script>
+
+  <script>
+    function wtf() {}
+  </script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+      }
+    }
+  </script>
+  <style>
+    body {
+      display: flex;
+      justify-content: left;
+      padding: 0px 50px;
+      margin-top: 100px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      webkit-font-smoothing: antialiased;
+    }
+    canvas {
+      width: 60% !important;
+      height: 700px !important;
+      object-fit: cover;
+      cursor: grab;
+      margin-right: 35px;
+    }
+    canvas:active {
+      cursor: grabbing;
+    }
+    .info {
+      margin-top: 75px;
+      line-height: 24px;
+      padding-right: 50px;
+    }
+    .info h1 {
+      font-size: 45pt;
+      padding-bottom: 30px;
+    }
+    .info p {
+      font-size: 12pt;
+    }
+    button {
+      border: none;
+      background-color: rgb(229, 229, 229);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12pt;
+      cursor: pointer;
+    }
+  </style>
+</html>
